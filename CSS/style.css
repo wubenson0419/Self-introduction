@@ -1,0 +1,98 @@
+/* 全域樣式重置 ... (前面所有樣式都保持不變) ... */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: linear-gradient(135deg, #2a2a2a, #1a1a1a); color: #FFFFFF; font-family: sans-serif, "微軟正黑體"; padding: 20px; }
+header { text-align: center; margin-bottom: 20px; }
+header h1 { font-size: 28px; background-color: #3C3C3C; padding: 10px 20px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); }
+.profile-card { background-color: #3C3C3C; border-radius: 20px; padding: 20px; text-align: center; margin-bottom: 25px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); }
+.profile-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #FFFFFF; }
+.profile-info p { font-size: 18px; line-height: 1.6; text-align: left; }
+.section-title { text-align: center; margin-bottom: 15px; }
+.social-links-container { }
+.social-links { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 15px; }
+.social-links a { position: relative; overflow: hidden; z-index: 1; display: flex; align-items: center; justify-content: center; padding: 12px; font-size: 18px; color: #FFFFFF; background-color: #4F4F4F; border-radius: 12px; text-decoration: none; transition: background-color 0.7s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); border: 0.5px solid #FFFFFF; }
+.social-links a i { margin-right: 10px; }
+.instagram::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); opacity: 0; transition: opacity 0.5s ease; z-index: -1; }
+.facebook:hover { background-color: #1877F2; }
+.instagram:hover::before { opacity: 1; }
+.threads:hover { background-color: #000000; }
+.line:hover { background-color: #00C300; }
+.youtube:hover { background-color: #c4302b; }
+.github:hover { background-color: #24292e; }
+footer { text-align: center; font-family: "Source Code Pro", monospace; margin-top: 30px; font-size: 14px; color: #BBBBBB; }
+
+@media (min-width: 1024px) {
+    .main-content { display: flex; justify-content: space-between; max-width: 1000px; margin: 0 auto; gap: 4%; }
+    .profile-card, .social-links-container { flex-basis: 48%; margin-bottom: 0; display: flex; flex-direction: column; }
+    .profile-card img { align-self: center; }
+    .social-links-container { background-color: #3C3C3C; border-radius: 20px; padding: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); }
+    .social-links { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+}
+
+
+/* --- [新增] 導航菜單和按鈕樣式 --- */
+
+/* 菜單按鈕樣式 */
+#menu-toggle {
+    position: fixed; /* 固定在視窗左上角 */
+    top: 20px;
+    left: 20px;
+    z-index: 1001; /* 確保在最上層 */
+    width: 50px;
+    height: 50px;
+    background-color: #3C3C3C;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover {
+    background-color: #4F4F4F;
+}
+
+/* 導航菜單面板 (預設在畫面左側外) */
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px; /* 菜單寬度 */
+    height: 100vh; /* 菜單高度為整個視窗 */
+    background: #1a1a1a;
+    z-index: 1000;
+    transform: translateX(-100%); /* 將其向左移出畫面 */
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); /* 平滑滑動動畫 */
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 當導航菜單有 'menu-open' class 時，將其移回畫面內 */
+#main-nav.menu-open {
+    transform: translateX(0);
+}
+
+#main-nav ul {
+    list-style: none; /* 移除項目符號 */
+}
+
+#main-nav ul li {
+    margin-bottom: 20px;
+}
+
+/* 菜單內的連結樣式 */
+#main-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#main-nav a:hover {
+    background-color: #3C3C3C;
+}
