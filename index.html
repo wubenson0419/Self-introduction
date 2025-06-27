@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>吳秉乾的小小網站</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
     <meta name="theme-color" content="#3C3C3C">
 </head>
+
 <body>
-    <button id="menu-toggle" aria-label="開啟/關閉菜單">
-        <i id="menu-icon" class="fa-solid fa-list-ul"></i>
-    </button>
-    <nav id="main-nav">
-        <ul>
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="#">我的作品</a></li>
-            <li><a href="#">攝影集</a></li>
-            <li><a href="#">聯絡我</a></li>
-        </ul>
-    </nav>
-    <div id="menu-overlay"></div>
-    
+    <!-- 頁首區域：網站標題 -->
     <header>
         <h1>～吳秉乾的自我介紹～</h1>
     </header>
 
-    <main class="main-content">
+    <!-- 主要內容區：在寬螢幕時，這裡會變成左右兩欄 -->
+    <div class="main-content">
+        <!-- 左側：個人檔案卡片區 (在寬螢幕上) -->
         <section class="profile-card">
-            <img src="images/S_11296777.jpg" alt="PhotoError">
+            <img src="../images/" alt="PictureError">
             <div class="profile-info">
                 <p><strong>姓名：</strong>吳秉勳</p>
                 <p><strong>綽號：</strong>吳秉乾</p>
@@ -43,23 +36,37 @@
                 <p><strong>在學狀態：</strong>就讀中(暑假)</p>
             </div>
         </section>
+
+        <!-- 右側：社交平台連結區 (在寬螢幕上) -->
         <section class="social-links-container">
             <h2 class="section-title">社交平台連結</h2>
             <div class="social-links">
-                <a href="https://www.facebook.com/wu.benson0419" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="https://www.instagram.com/wu.benson0419" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.threads.net/@wu.benson0419" target="_blank" class="threads"><i class="fa-brands fa-threads"></i> Threads</a>
-                <a href="https://line.me/ti/p/gwNsHrbZ9Y" target="_blank" class="line"><i class="fa-brands fa-line"></i> Line</a>
-                <a href="https://www.youtube.com/@wu.benson0419" target="_blank" class="youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                <a href="https://github.com/wubenson0419" target="_blank" class="github"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.facebook.com/wu.benson0419" target="_blank" class="facebook">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/wu.benson0419" target="_blank" class="instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.threads.net/@wu.benson0419" target="_blank" class="threads">
+                    <i class="fa-brands fa-threads"></i> Threads
+                </a>
+                <a href="https://line.me/ti/p/gwNsHrbZ9Y" target="_blank" class="line">
+                    <i class="fa-brands fa-line"></i> Line
+                </a>
+                <a href="https://www.youtube.com/@wu.benson0419" target="_blank" class="youtube">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </a>
+                <a href="https://github.com/wubenson0419" target="_blank" class="github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
             </div>
         </section>
-    </main>
+    </div>
     
+    <!-- 頁腳版權區 -->
     <footer>
-        © 2025 吳秉乾的小小網站 | 由 Benson Wu 製作<br>v1.4.0
+        © 2025 吳秉乾的小小網站 | 由 Benson Wu 製作<br>
+        v1.3.0
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
