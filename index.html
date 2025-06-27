@@ -4,126 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>吳秉乾的小小網站</title>
-    <!-- 引入 Font Awesome 圖標庫 -->
+    
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <!-- 加入字體(Source Code Pro) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
     <meta name="theme-color" content="#3C3C3C">
-    <style>
-        /* 全域樣式重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; /* 確保 padding 與 border 不會影響元素實際大小 */
-        }
-
-        /* 設定頁面背景與整體字體 */
-        body {
-            background: linear-gradient(135deg, #2a2a2a, #1a1a1a); /* 深色漸層背景 */
-            color: #FFFFFF; /* 文字顏色為白色 */
-            font-family: sans-serif , "微軟正黑體" ; /* 設定主要字體 */
-            padding: 20px; /* 四周留白讓內容不貼邊 */
-        }
-
-        /* 頁首標題區 */
-        header {
-            text-align: center; /* 標題置中 */
-            margin-bottom: 20px; /* 與下方內容保持間距 */
-        }
-
-        header h1 {
-            font-size: 28px; /* 標題字體大小 */
-            background-color: #3C3C3C; /* 深灰背景讓標題突出 */
-            padding: 10px 20px; /* 內距使標題不顯擁擠 */
-            border-radius: 15px; /* 圓角修飾 */
-            display: inline-block; /* 讓背景寬度僅包覆文字 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 輕微陰影增加立體感 */
-        }
-
-        /* 個人檔案卡片區塊 */
-        .profile-card {
-            background-color: #3C3C3C; /* 深灰背景與頁面背景形成層次 */
-            border-radius: 20px; /* 圓角增加柔和感 */
-            padding: 20px; /* 內距確保內容不緊貼邊緣 */
-            text-align: center; /* 內容置中 */
-            margin-bottom: 25px; /* 與下方社交連結區保持距離 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* 更深的陰影營造卡片浮起效果 */
-        }
-
-        /* 頭像圖片樣式 */
-        .profile-card img {
-            width: 120px; /* 設定固定寬高，適合手機觀看 */
-            height: 120px;
-            border-radius: 50%; /* 製作圓形頭像 */
-            object-fit: cover; /* 保持圖片比例並填滿容器 */
-            margin-bottom: 15px; /* 與下方文字分開 */
-            border: 3px solid #FFFFFF; /* 白色邊框突顯頭像 */
-        }
-
-        /* 個人資訊區塊 */
-        .profile-info p {
-            font-size: 18px; /* 閱讀友善的字體大小 */
-            line-height: 1.6; /* 增加行距提升可讀性 */
-            text-align: left; /* 文字靠左排列更自然 */
-        }
-
-        /* 社交平台連結區 */
-        .social-links {
-            display: grid; /* 使用網格排版 */
-            grid-template-columns: 1fr; /* 單欄結構適合手機排版 */
-            gap: 10px; /* 按鈕間距避免擁擠 */
-            margin-top: 15px; /* 與標題保持間距 */
-        }
-
-        /* 社交按鈕共用樣式 */
-        .social-links a {
-            display: flex; /* 使用 flex 將圖標與文字水平排列 */
-            align-items: center; /* 圖標與文字垂直置中 */
-            justify-content: center; /* 整個按鈕內容置中 */
-            padding: 12px; /* 按鈕大小適中，易於點擊 */
-            font-size: 18px; /* 文字大小清晰可辨 */
-            color: #FFFFFF; /* 預設文字顏色白色 */
-            background-color: #4F4F4F;
-            border-radius: 12px; /* 圓角增加友善感 */
-            text-decoration: none; /* 移除底線 */
-            transition: background-color 0.7s ease; /* 滑鼠懸停背景色變化有柔和過渡效果 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 陰影提供立體感 */
-            border: 0.5px solid #FFFFFF;
-
-        }
-
-        .social-links a i {
-            margin-right: 10px; /* 圖標與文字間距 */
-        }
-
-        /* 不同平台按鈕顏色設計 */
-        /*.facebook { background-color: #1877F2; } /* Facebook 藍色 */
-        .facebook:hover { background-color: #1877F2; } /* 懸停時深一點 */
-
-        .instagram:hover { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); } /* Instagram 漸層 */
-
-        /*.threads { background-color: #000000; } /* Threads 黑色風格 */
-        .threads:hover { background-color: #000000; } /* 懸停時灰色調 */
-
-        /*.line { background-color: #00C300; } /* LINE 綠色 */
-        .line:hover { background-color: #00C300; } /* 深綠懸停效果 */
-
-        /*.youtube {background-color: #c4302b; }*/
-        .youtube:hover {background-color: #c4302b; }
-
-        .github:hover {background-color: #24292e}
-
-        /* 頁腳區塊 */
-        footer {
-            text-align: center; /* 文字置中 */
-            font-family: Source Code Pro ;
-            margin-top: 30px; /* 與內容保持距離 */
-            font-size: 14px; /* 較小字體用於版權資訊 */
-            color: #BBBBBB; /* 淡灰色不搶眼 */
-        }
-    </style>
 </head>
 
 <body>
@@ -132,47 +20,53 @@
         <h1>～吳秉乾的自我介紹～</h1>
     </header>
 
-    <!-- 個人檔案卡片區 -->
-    <section class="profile-card">
-        <img src="https://github.com/Benson-WU980419/-/blob/main/S__11296777.jpg?raw=true" alt="PictureError">
-        <div class="profile-info">
-            <p><strong>姓名：</strong>吳秉勳</p>
-            <p><strong>綽號：</strong>吳秉乾</p>
-            <p><strong>英文：</strong>Benson Wu</p>
-            <p><strong>生日：</strong>2009/04/19</p>
-            <p><strong>興趣：</strong>攝影、拆解東西</p>
-            <p><strong>學校：</strong>國立臺中科技大學</p>
-            <p><strong>科系：</strong>資訊工程科(五專)</p>
-        </div>
-    </section>
+    <!-- 主要內容區：在寬螢幕時，這裡會變成左右兩欄 -->
+    <div class="main-content">
+        <!-- 左側：個人檔案卡片區 (在寬螢幕上) -->
+        <section class="profile-card">
+            <img src="https://github.com/Benson-WU980419/-/blob/main/S__11296777.jpg?raw=true" alt="PictureError">
+            <div class="profile-info">
+                <p><strong>姓名：</strong>吳秉勳</p>
+                <p><strong>綽號：</strong>吳秉乾</p>
+                <p><strong>英文：</strong>Benson Wu</p>
+                <p><strong>生日：</strong>2009/04/19</p>
+                <p><strong>興趣：</strong>攝影、拆解東西</p>
+                <p><strong>學校：</strong>國立臺中科技大學</p>
+                <p><strong>科系：</strong>資訊工程科(五專)</p>
+                <p><strong>在學狀態：</strong>就讀中(暑假)</p>
+            </div>
+        </section>
 
-    <!-- 社交平台連結區 -->
-    <section>
-        <h2 style="text-align: center; margin-bottom: 15px;">社交平台連結</h2>
-        <div class="social-links">
-            <a href="https://www.facebook.com/wu.benson0419" target="_blank" class="facebook">
-                <i class="fa-brands fa-facebook"></i> Facebook
-            </a>
-            <a href="https://www.instagram.com/wu.benson0419" target="_blank" class="instagram">
-                <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
-            <a href="https://www.threads.net/@wu.benson0419" target="_blank" class="threads">
-                <i class="fa-brands fa-threads"></i> Threads
-            </a>
-            <a href="https://line.me/ti/p/gwNsHrbZ9Y" target="_blank" class="line">
-                <i class="fa-brands fa-line"></i> Line
-            </a>
-            <a href="https://www.youtube.com/@wu.benson0419"target="_blank" class="youtube">
-                <i class="fa-brands fa-youtube"></i>YouTube
-            <a href="https://github.com/Benson-WU980419"target="_blank" class="github">
-                <i class="fa-brands fa-github"></i>GitHub
-            </a>
-        </div>
-    </section>
+        <!-- 右側：社交平台連結區 (在寬螢幕上) -->
+        <section class="social-links-container">
+            <h2 class="section-title">社交平台連結</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/wu.benson0419" target="_blank" class="facebook">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/wu.benson0419" target="_blank" class="instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.threads.net/@wu.benson0419" target="_blank" class="threads">
+                    <i class="fa-brands fa-threads"></i> Threads
+                </a>
+                <a href="https://line.me/ti/p/gwNsHrbZ9Y" target="_blank" class="line">
+                    <i class="fa-brands fa-line"></i> Line
+                </a>
+                <a href="https://www.youtube.com/@wu.benson0419" target="_blank" class="youtube">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </a>
+                <a href="https://github.com/wubenson0419" target="_blank" class="github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </section>
+    </div>
+    
     <!-- 頁腳版權區 -->
     <footer>
         © 2025 吳秉乾的小小網站 | 由 Benson Wu 製作<br>
-        v1.2.4
+        v1.3.0
     </footer>
 </body>
 </html>
